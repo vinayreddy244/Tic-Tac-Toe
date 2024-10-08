@@ -1,0 +1,128 @@
+body{
+    background-color: black;
+
+}
+#head
+{
+    font-size: 50px;
+    color:white;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(90deg, yellow, #32CD32); 
+    background-clip: text;
+    color: transparent;
+    display:inline-block;
+}
+
+
+.letter {
+    display: inline-block; 
+    opacity: 0; 
+    transform: translateY(20px); 
+    animation: appear 0.5s forwards; 
+    color:white;
+    background: linear-gradient(90deg, yellow, #32CD32); 
+    background-clip: text;
+    color: transparent;
+}
+
+
+.letter:nth-child(1) { animation-delay: 0ms; }
+.letter:nth-child(2) { animation-delay: 100ms; }
+.letter:nth-child(3) { animation-delay: 200ms; }
+.letter:nth-child(4) { animation-delay: 300ms; }
+.letter:nth-child(5) { animation-delay: 400ms; }
+.letter:nth-child(6) { animation-delay: 500ms; }
+.letter:nth-child(7) { animation-delay: 600ms; }
+.letter:nth-child(8) { animation-delay: 700ms; }
+.letter:nth-child(9) { animation-delay: 800ms; }
+.letter:nth-child(10) { animation-delay: 900ms; }
+.letter:nth-child(11) { animation-delay: 1000ms; }
+
+@keyframes appear {
+    to {
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+}
+
+
+
+
+
+
+#container
+{
+    display:grid;
+    grid-template-columns: 100px 100px 100px;
+    row-gap: 10px;
+    column-gap: 10px;
+    justify-content: center;
+    align-content: center;
+    
+}
+
+#cell0,#cell1,#cell2,#cell3,#cell4,#cell5,#cell6,#cell7,#cell8
+{
+    background-color: white;
+    height:100px;
+    width:100px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    animation: fadeIn 0.8s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.cell {
+    
+    transition: transform 0.8s, background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.cell:hover {
+    transform: scale(1.1);
+    background-color: red;
+}
+
+.cell.clicked {
+    animation: zoomIn 0.3s ease-out forwards;
+}
+
+@keyframes zoomIn {
+    0% {
+        transform: scale(1.5);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+#btn
+{
+    font-size: 30px;
+    padding:20px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+#btn:hover{
+    transform: scale(1.1);
+    box-shadow: 0 0 15px #ff00ff;
+}
+#btn:active
+{
+    transform: scale(0.9);
+}
+
