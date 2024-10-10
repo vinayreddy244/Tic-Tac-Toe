@@ -4,13 +4,14 @@ body{
 }
 #head
 {
-    font-size: 45px;
+    font-size: 40px;
     color:white;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: linear-gradient(90deg, yellow, #32CD32); 
     background-clip: text;
     color: transparent;
     display:inline-block;
+    margin-right: 30px;
 }
 
 
@@ -55,7 +56,7 @@ body{
     display:grid;
     grid-template-columns: 100px 100px 100px;
     row-gap: 10px;
-    column-gap: 10px;
+    column-gap: 1px;
     justify-content: center;
     align-content: center;
     
@@ -64,8 +65,8 @@ body{
 #cell0,#cell1,#cell2,#cell3,#cell4,#cell5,#cell6,#cell7,#cell8
 {
     background-color: white;
-    height:100px;
-    width:100px;
+    height:80px;
+    width:80px;
     display:flex;
     justify-content: center;
     align-items: center;
@@ -126,3 +127,8 @@ body{
     transform: scale(0.9);
 }
 
+#status
+{
+    color:white;
+    font-size: 50px;
+}
